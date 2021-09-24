@@ -20,7 +20,7 @@ const Navbar = () => {
                 const { id, text, path } = link;
                 return (
                   <li key={id}>
-                    <Link to={path} className="site-header__link">
+                    <Link  to={path} className="site-header__link">
                       {text}
                     </Link>
                   </li>

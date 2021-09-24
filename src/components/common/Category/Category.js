@@ -1,13 +1,16 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import './Category.scss'
 
-const Category = () => {
+const Category = ({Category, allList}) => {
+    console.log(allList);
+   
     return (
        
         <div className="category">
-        <h2>category</h2>
-        <h3>VIEW ALL PRODUCTS</h3>
+        <h2>{Category}</h2>
+        <Link to={`/category/${Category}`} ><h3>VIEW ALL PRODUCTS</h3></Link>
     </div>
     )
 }

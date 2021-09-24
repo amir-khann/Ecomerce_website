@@ -5,6 +5,8 @@ import Main from './components/Main/Main';
 
 // components
 import Navbar from './components/Navbar/Navbar';
+import Error from './pages/Error';
+import Home from './pages/Home';
 
 
 
@@ -12,15 +14,10 @@ import Navbar from './components/Navbar/Navbar';
 const App = () => {
   return (
     <Router>
-     
       <Navbar />
-      <Main />
-   
       <Switch>
-       
-        <Route path="*">
-
-        </Route>
+        <Route exact path="/" component={Home} />
+        <Route path="*" component={Error} />
       </Switch>
       <Footer />
     </Router>
