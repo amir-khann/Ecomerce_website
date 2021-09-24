@@ -14,7 +14,7 @@ const Navbar = () => {
 
   return (
     <header className="site-header">
-        <div className="logo">Super <span>Store </span></div>
+       <Link to="/"><div className="logo">Super <span>Store </span></div></Link>
         <ul>
         {navbarLinks.map((link) => {
                 const { id, text, path } = link;
