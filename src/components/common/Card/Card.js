@@ -1,19 +1,21 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 import './Card.scss'
-let productimg = "https://images.unsplash.com/photo-1491553895911-0055eca6402d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=880&q=80";
-const Card = () => {
+const Card = ({product}) => {
 
-    let value = 4.5;
+    let value = product.rating.rate
+   
     let color ="red";
 
     return (
         <div className="card">
-            <img src={productimg}></img>
+           
+           <Link to={`productDetail/${product.id}`}><div className="image_wrapper"> <img src={product.image}></img></div></Link>
             <div className="content_wrapper">
             <div className="title">
-                <h3>title goes here</h3>
-                <h4>$40</h4>
+                <Link to={`productDetail/${product.id}`}><h3>{product.title}</h3></Link>
+                <h4>${product.price}</h4>
             </div>
             
             <div className="review">
@@ -79,7 +81,7 @@ const Card = () => {
                 ></i>
             </span>
                 </div>
-                <p>Review(43)</p>
+                <p>Review({product.rating.count})</p>
                 </div>
             </div>
         </div>
