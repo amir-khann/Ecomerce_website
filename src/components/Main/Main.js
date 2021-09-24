@@ -32,12 +32,6 @@ const Main = () => {
      
 
 
-  if(womenSubArray.length>0){
-    console.log("mehran",womenSubArray[0].id);
-
-  }
-
-
   
     return (
         <div className="main">

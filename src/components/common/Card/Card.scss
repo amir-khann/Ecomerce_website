@@ -11,7 +11,7 @@
         overflow: hidden;
     }
     
-    img{
+    .product_img{
         height: 280px;
         width: 100%;
         transition: all .3s ease-in-out;
@@ -21,7 +21,7 @@
             transform: scale(1.1);
         }
     }
-    img:hover{
+    .product_img:hover{
         scale: 2;
         cursor: pointer;
     }
@@ -38,7 +38,7 @@
                 font-weight: bold;
             }
             h3{
-                color: black;
+                color: rgb(94, 84, 185);
 
                 &:hover{
                     text-decoration: underline;
