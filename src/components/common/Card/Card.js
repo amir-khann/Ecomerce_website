@@ -7,7 +7,6 @@ const Card = ({product}) => {
     let value = product.rating.rate
    
     let color ="red";
-
     return (
         <div className="card">
            
