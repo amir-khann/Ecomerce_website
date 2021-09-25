@@ -14,7 +14,7 @@
     .product_img{
         height: 280px;
         width: 100%;
-        transition: all .3s ease-in-out;
+        transition: all .3s ease-in;
         transform: scale(1);
 
         &:hover{
@@ -34,8 +34,9 @@
             justify-content: space-between;
 
             h3,h4{
-                font-size: 18px;
+                font-size: 16px;
                 font-weight: bold;
+                line-height: 1.2;
             }
             h3{
                 color: rgb(94, 84, 185);
