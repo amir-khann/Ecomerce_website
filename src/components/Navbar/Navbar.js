@@ -1,9 +1,6 @@
 
 import { Link } from 'react-router-dom';
 
-// import navbar links from utils
-import { navbarLinks } from '../../utils/navbarLinks';
-
 
 
 
@@ -16,16 +13,23 @@ const Navbar = () => {
     <header className="site-header">
        <Link to="/"><div className="logo">Super <span>Store </span></div></Link>
         <ul>
-        {navbarLinks.map((link) => {
-                const { id, text, path } = link;
-                return (
-                  <li key={id}>
-                    <Link  to={path} className="site-header__link">
-                      {text}
+    
+                  <li >
+                    <Link  to="/" className="site-header__link">
+                      Home
+                    </Link>
+                    </li>
+                    <li>
+                    <Link  to="products" className="site-header__link">
+                      Products 
+                    </Link>
+                    </li>
+                    <li>
+                    <Link  to="CART" className="site-header__link">
+                      Cart <span><i class="fas fa-shopping-cart"></i></span>
                     </Link>
                   </li>
-                );
-              })}
+             
         </ul>
     </header>
   );
