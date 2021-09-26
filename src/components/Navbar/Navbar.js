@@ -26,7 +26,7 @@ const Navbar = () => {
                     </li>
                     <li>
                     <Link  to="CART" className="site-header__link">
-                      Cart <span><i class="fas fa-shopping-cart"></i></span>
+                      Cart <span><i className="fas fa-shopping-cart"></i></span>
                     </Link>
                   </li>
              

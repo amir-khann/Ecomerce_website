@@ -43,14 +43,14 @@ const Cart = () => {
     return (
        
             <div className="cart_wrapper">
-             {cartList.cartItems.length === 0?<h1>no Items in Cart</h1> :(   <div className="cart">
+             {cartList.cartItems.length === 0?<h1>no Items in Cart</h1> :( <div className="cart">
                     <div className="heading">
                         <h3>Shopping Cart</h3>
                         <h4 onClick={()=>dispatch(resetCart())}>Remove all</h4>
                     </div>
 
                         {cartList.cartItems?.map((item)=>(
-                            <div className="item">
+                            <div className="item" key={item.id}>
                             <div className="item_img">
                                 <img src={item.image} alt="img" />
                             </div>
