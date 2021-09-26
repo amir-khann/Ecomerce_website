@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams } from 'react-router'
+import { useHistory, useParams } from 'react-router'
 import { addToCart } from '../../redux/Actions/CartActions';
 
 import './ProductDetail.scss'
 const Productdetail = () => {
 
     const { id } = useParams();
+    const history = useHistory()
 
     const dispatch = useDispatch()
    
@@ -18,6 +19,7 @@ const Productdetail = () => {
     
    const hanelClick = (abc) =>{
     dispatch(addToCart(abc));
+    history.push('/')
    }
     
     return (

@@ -51,7 +51,7 @@
             }
           .item_btn{
             font-size: 33px;
-              span{
+            .span_btn{
                 background-color: #f34343;
                 border-radius: 50%;
                 width: 50px;
@@ -60,8 +60,12 @@
                 justify-content: center;
                 align-items: center;
                 color: white;
+                border: none;
                 &:hover{
                     cursor: pointer;
+                }
+                &:disabled{
+                    background-color: #e06a6a;
                 }
                
               }
@@ -70,8 +74,20 @@
               }
          }
          .item_price{
-             font-size: 32px;
+             font-size: 22px;
              font-weight: bolder;
+             display: flex;
+             flex-direction: column;
+
+             p{
+                 color: #f34343;
+                 font-size: 15px;
+                 text-decoration: underline;
+
+                 &:hover{
+                     cursor: pointer;
+                 }
+             }
          }
 
         }
