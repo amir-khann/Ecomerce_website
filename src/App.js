@@ -4,6 +4,7 @@ import Footer from './components/Footer/Footer';
 
 // components
 import Navbar from './components/Navbar/Navbar';
+import Cart from './pages/Cart/Cart';
 import Category from './pages/Category';
 import Error from './pages/Error';
 import Home from './pages/Home';
@@ -21,6 +22,7 @@ const App = () => {
         <Route exact path="/" component={Home} />
         <Route path="/products" component={Products} />
         <Route path="/productDetail/:id" component={ProductDetail} />
+        <Route path="/cart" component={Cart} />
         <Route path="/category/:category" component={Category} />
         <Route path="*" component={Error} />
       </Switch>
