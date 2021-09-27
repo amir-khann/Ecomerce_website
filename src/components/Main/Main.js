@@ -4,7 +4,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import { listProducts } from '../../redux/Actions/productActions'
 import Card from '../common/Card/Card'
 import Category from '../common/Category/Category'
-import Loader from '../common/Loader/Loader'
+import Loader from '../Loader/Loader'
+
 
 import "./Main.scss"
 
