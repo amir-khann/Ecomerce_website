@@ -20,8 +20,8 @@ const App = () => {
       <Navbar />
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/products" component={Products} />
         <Route path="/productDetail/:id" component={ProductDetail} />
+        <Route path="/products" component={Products} />
         <Route path="/cart" component={Cart} />
         <Route path="/category/:category" component={Category} />
         <Route path="*" component={Error} />

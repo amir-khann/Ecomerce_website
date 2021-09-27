@@ -1,5 +1,6 @@
 
-import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { Link} from 'react-router-dom';
 
 
 
@@ -8,6 +9,11 @@ import { Link } from 'react-router-dom';
 import './Navbar.scss';
 
 const Navbar = () => {
+
+
+  const cart = useSelector((state) => state)
+  const { cartList } = cart
+  console.log(cartList.cartItems.length);
 
   return (
     <header className="site-header">
@@ -26,7 +32,7 @@ const Navbar = () => {
                     </li>
                     <li>
                     <Link  to="CART" className="site-header__link">
-                      Cart <span><i className="fas fa-shopping-cart"></i></span>
+                      <i className="fas fa-shopping-cart"></i><span>{cartList.cartItems.length}</span>
                     </Link>
                   </li>
              

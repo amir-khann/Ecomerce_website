@@ -1,7 +1,6 @@
 import {
     CART_ADD_ITEM,
     CART_REMOVE_ITEM,
-    CART_CLEAR_ITEMS,
     RESET_CART,
     INCREASE_QTY,
   } from '../Constants/cartConstants'

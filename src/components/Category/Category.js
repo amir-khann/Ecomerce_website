@@ -10,12 +10,11 @@ const Category = () => {
     const dispatch = useDispatch()
     const category = useParams();
     const productList = useSelector((state) => state.productList)
-    console.log(productList);
   
   useEffect(() => {
     dispatch(listProducts())
   }, [dispatch])
-  const { loading, error, products, page, pages } = productList
+  const {  products} = productList
   const product = products.filter((product)=>product.category === category.category);
 
     return (
