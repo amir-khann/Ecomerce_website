@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { listProducts } from '../../redux/Actions/productActions'
 import Card from '../common/Card/Card'
 import Category from '../common/Category/Category'
+import Loader from '../common/Loader/Loader'
 
 import "./Main.scss"
 
@@ -16,7 +17,7 @@ const Main = () => {
     dispatch(listProducts())
   }, [dispatch])
 
-  const { loading, error, products, page, pages } = productList
+  const { loading, products } = productList
 
   const womenClothesList = products.filter((product)=>product.category === "women's clothing");
   const womenSubArray = womenClothesList.slice(0,4);
@@ -34,7 +35,8 @@ const Main = () => {
 
   
     return (
-        <div className="main">
+      <div>
+        {loading ===true ? <Loader /> :(  <div className="main">
           <Category  Category={womenSubArray.length? womenSubArray[0].category:""} allList={womenSubArray.length? womenClothesList:""}/>
           <div className="card_wrapper">
               {
@@ -68,7 +70,8 @@ const Main = () => {
                 ))
               }
           </div>
-        </div>
+        </div>)}
+      </div>
     )
 }
 

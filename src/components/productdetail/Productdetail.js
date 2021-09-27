@@ -12,13 +12,13 @@ const Productdetail = () => {
     const dispatch = useDispatch()
    
     const productList = useSelector(state => state.productList)
-    const { loading, error, products, page, pages } = productList
+    const { products} = productList
 
    
     const product = products.find(product => product.id == id);
     
-   const hanelClick = (abc) =>{
-    dispatch(addToCart(abc));
+   const hanelClick = (product) =>{
+    dispatch(addToCart(product));
     history.push('/')
    }
     

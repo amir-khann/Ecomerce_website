@@ -1,9 +1,8 @@
 .card{
     width: 23%;
-    min-height: 460px;
+    min-height: 425px;
     background-color: white;
-    // box-shadow: 0px 3px 10px 1px rgba(0,0,0,0.75);
-    border: 1px solid rgb(216, 215, 215);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     overflow: hidden;
     position: relative;
     
@@ -32,6 +31,7 @@
         .title{
             display: flex;
             justify-content: space-between;
+            
 
             h3,h4{
                 font-size: 16px;
@@ -40,23 +40,36 @@
             }
             h3{
                 color: rgb(94, 84, 185);
-
+                width: 85%;
                 &:hover{
                     text-decoration: underline;
                 }
+            }
+            .add{
+             background-color: #f34343;
+             color: white;
+             border: none;
+             padding: 5px 10px;
+             border-radius: 8px;
+             margin-top: 10px;
+
+             &:hover{
+                //  background-color: #bb2424;
+                 cursor: pointer;
+                 box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
+
+             }
             }
             
         }
     }
     .review{
-        // margin-top: 20px;
         display: flex;
+        margin-top: 20px;
         justify-content: space-between;
-        position: absolute;
-        bottom: 10px;
 
         p{
-            color: red;
+            color: #f34343;
             font-weight: bold;
             margin-left: 10px;
             
