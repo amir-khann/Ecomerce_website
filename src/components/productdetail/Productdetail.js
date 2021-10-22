@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory, useParams } from 'react-router'
 import { addToCart } from '../../redux/Actions/CartActions';
@@ -15,7 +15,7 @@ const Productdetail = () => {
     const { products} = productList
 
    
-    const product = products.find(product => product.id == id);
+    const product = products.find(product => product.id === id);
     
    const hanelClick = (product) =>{
     dispatch(addToCart(product));
@@ -25,7 +25,7 @@ const Productdetail = () => {
     return (
             <div className="card_detail">
                 <div className="card">
-                    <img src={product.image} className="detail_img"></img>
+                    <img src={product.image} className="detail_img" alt="img"></img>
                     <div className="heading">
                         <h3>{product.title}</h3>
                         <h4>${product.price}</h4>

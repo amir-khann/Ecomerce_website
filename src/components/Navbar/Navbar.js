@@ -13,7 +13,6 @@ const Navbar = () => {
 
   const cart = useSelector((state) => state)
   const { cartList } = cart
-  console.log(cartList.cartItems.length);
 
   return (
     <header className="site-header">

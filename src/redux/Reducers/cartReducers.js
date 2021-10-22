@@ -47,17 +47,17 @@ import {
             }
           }
       case CART_REMOVE_ITEM:
-
+       
        const exist = state.cartItems.filter((x) => x.id !== action.payload)
-       if (exist.qty > 1){
-         exist.qty = exist.qty--
+       if (exist.qty > 1){ 
+        return exist.qty = exist.qty--
        }else{
         return {
           ...state,
           cartItems: state.cartItems.filter((x) => x.id !== action.payload),
         }
        }
-       
+      
   
       case RESET_CART:
         return {
