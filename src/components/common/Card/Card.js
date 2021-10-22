@@ -29,7 +29,7 @@ const Card = ({product}) => {
                        <button className="add"  onClick={() =>hanelClick(product)}>add</button>
                     </div>
                 </div>
-                
+                {/* refector this in make a review component */}
                 <div className="review">
                     <div className="rating">
                         <span>

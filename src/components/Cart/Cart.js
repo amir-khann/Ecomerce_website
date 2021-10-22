@@ -5,40 +5,22 @@ import { addToCart, increaseQty, removeFromCart, resetCart } from '../../redux/A
 import "./Cart.scss"
 
 
-// import { addToCart, removeFromCart } from '../actions/cartActions'
 const Cart = () => {
-
-  
     const dispatch = useDispatch()
   
     const cart = useSelector((state) => state)
     const { cartList } = cart
   
-   
-    // useEffect(() => {
-    //   if (productId) {
-    //     dispatch(addToCart(productId, qty))
-    //   }
-    // }, [dispatch, productId, qty])
-  
-    // const removeFromCartHandler = (id) => {
-    //   dispatch(removeFromCart(id))
-    // }
-     
-   
-        const addCart = (item) =>{
-            dispatch(addToCart(item));
-           
-           }
-        
-        const removeCart = (item) =>{
-            dispatch(removeFromCart(item));
+    const addCart = (item) =>{
+        dispatch(addToCart(item));
         }
     
-        const increase = (item) =>{
-            console.log("log increase  1 from",item.title);
-            dispatch(increaseQty(item))
-        }
+    const removeCart = (item) =>{
+        dispatch(removeFromCart(item));
+    }
+    const increase = (item) =>{
+        dispatch(increaseQty(item))
+    }
           
     return (
        
@@ -73,8 +55,6 @@ const Cart = () => {
                         </div>
                         ))}
                    
-
-
                     <div className="total_wrapper">
                         <div className="total">
                             <div className="content">
